@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="/style/output.css" />
   </head>
   <body>
-    <div class="my-2" id="navbar__placeholder"></div>
+    <!-- <div class="my-2" id="navbar__placeholder"></div> -->
+
+    <nav class="flex justify-between container mx-auto">
+      <div class="my-auto cursor-pointer font-bold text-primary" id="logoClick">
+        <a class="text-2xl" href="../index.html">Logo</a>
+      </div>
+      <ul class="list-none flex cursor-pointer my-auto">
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../service.html">Services</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../blog.html">Blogs</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          Community
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          Contact Us
+        </li>
+      </ul>
+      <button
+        class="rounded-full px-8 py-2 my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300"
+      >
+        Let's Talk
+      </button>
+    </nav>
 
     <!-- Hero Content -->
     <section class="mt-10">
@@ -97,6 +122,23 @@
       </div>
     </section>
 
-    <div id="footer__container"></div>
+    <section class="container mx-auto py-10">
+      <div class="text-center text-primary text-bold text-3xl">Logo</div>
+      <div class="flex flex-col my-4">
+        <div>848 King Street, Mesa, AZ 85201, Boston, USA</div>
+        <div>info@pawsitively.com</div>
+        <div class="flex justify-end my-2">
+          <ul class="flex gap-4 font-bold">
+            <li>Service</li>
+            <li>Blog</li>
+            <li>Community</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>© 2022 Brand, Inc. • Privacy • Terms • Sitemap</div>
+      </div>
+    </section>
+
+    <!-- <div id="footer__container"></div> -->
   </body>
 </html>
