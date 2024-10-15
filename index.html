@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./style/output.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="my-2" id="navbar__placeholder"></div>
+
+    <!-- Hero Section -->
+
+    <div class="flex flex-row container mx-auto">
+      <div class="basis-1/2 flex flex-col justify-center min-h-[640px]">
+        <div class="text-4xl font-bold text-primary">
+          Mental Wellness <br />Matters
+        </div>
+        <div class="w-3/5 my-4">
+          A welcoming environment with resources, self-care tips, and a
+          community dedicated to your mental and emotional well-being.
+        </div>
+        <div>
+          <button
+            class="py-2 px-8 rounded-full my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            Discover More
+          </button>
+        </div>
+      </div>
+      <div class="basis-1/2 min-h-fit">
+        <img src="assets/hero-image.png" alt="" />
+        <button><i class="mdi mdi-play"></i></button>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <section class="container mx-auto">
+      <div class="relative">
+        <video
+          src="assets/5529156-hd_1920_1080_30fps.mp4"
+          class="h-full rounded-3xl"
+          id="video"
+        ></video>
+
+        <!-- Play button centered in the video -->
+        <button
+          onclick="togglePlayPause()"
+          class="bg-primary w-24 h-24 rounded-full absolute inset-0 flex justify-center items-center top-1/2 left-1/2"
+          id="playButton"
+        >
+          <img src="assets/play-button-svgrepo-com.svg" class="w-10" />
+        </button>
+      </div>
+    </section>
+
+    <section class="flex flex-row container mx-auto my-20">
+      <div class="basis-1/2 flex flex-col justify-center min-h-[540px]">
+        <div class="text-4xl font-bold text-black my-4">Our Services</div>
+        <div class="w-3/5 my-4">
+          We provide personalized mental health support through assessments,
+          counseling, resources, support groups, and workshops, helping you
+          prioritize your mental well-being.
+        </div>
+        <div class="my-4">
+          <button
+            class="py-2 px-8 rounded-full my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+      <div class="basis-1/2">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="h-100 border rounded-md">
+            <h2 class="my-4 mx-4 text-left text-2xl font-bold text-primary">
+              Self Assessment <br />
+              Test
+            </h2>
+            <p class="my-8 mx-4 w-25 text-xl">
+              Exercitation culpa velit non desedder
+            </p>
+            <div class="mt-4 mb-8 mx-4">Take Assessment ></div>
+          </div>
+          <div class="h-100 border rounded-md">
+            <h2 class="my-4 mx-4 text-left text-2xl font-bold text-primary">
+              Self Assessment <br />
+              Test
+            </h2>
+            <p class="my-8 mx-4 w-25 text-xl">
+              Exercitation culpa velit non desedder
+            </p>
+            <div class="mt-4 mb-8 mx-4">Take Assessment ></div>
+          </div>
+          <div class="h-100 border rounded-md">
+            <h2 class="my-4 mx-4 text-left text-2xl font-bold text-primary">
+              Self Assessment <br />
+              Test
+            </h2>
+            <p class="my-8 mx-4 w-25 text-xl">
+              Exercitation culpa velit non desedder
+            </p>
+            <div class="mt-4 mb-8 mx-4">Take Assessment ></div>
+          </div>
+          <div class="h-100 border rounded-md">
+            <h2 class="my-4 mx-4 text-left text-2xl font-bold text-primary">
+              Self Assessment <br />
+              Test
+            </h2>
+            <p class="my-8 mx-4 w-25 text-xl">
+              Exercitation culpa velit non desedder
+            </p>
+            <div class="mt-4 mb-8 mx-4">Take Assessment ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-96 bg-primary">
+      <div class="container mx-auto flex flex-col justify-center text-center">
+        <h1 class="mt-16 text-center text-[4rem] font-bold text-[#fff]">
+          Join Our Anonymous Community
+        </h1>
+        <div class="text-2xl text-center text-[#fff]">
+          We can't wait to Hear Stories of People similar to you?
+        </div>
+        <div class="my-6">
+          <button
+            class="py-2 px-8 rounded-full my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            Join Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="" id="footer__container"></div>
+
+    <script src="/js/videoController.js"></script>
+  </body>
+</html>
