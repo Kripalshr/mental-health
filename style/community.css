@@ -6,6 +6,7 @@
 	background: none;
 	color: #8b8ba7;
 }
+
 /* styling of whole input container */
 .form {
 	display: flex;
@@ -15,6 +16,7 @@
 	border-radius: 30px;
 	width: 40%;
 }
+
 /* styling of Input */
 .input {
 	font-size: 0.9rem;
@@ -25,6 +27,7 @@
 	padding-block: 0.7em;
 	border: none;
 }
+
 /* styling of animated border */
 .form:before {
 	content: "";
@@ -39,6 +42,7 @@
 	border-radius: 1px;
 	transition: transform var(--timing) ease;
 }
+
 /* Hover on Input */
 .form:focus-within {
 	border-radius: var(--after-border-radius);
@@ -47,10 +51,12 @@
 input:focus {
 	outline: none;
 }
+
 /* here is code of animated border */
 .form:focus-within:before {
 	transform: scale(1);
 }
+
 /* styling of close button */
 /* == you can click the close button to remove text == */
 .reset {
@@ -59,11 +65,13 @@ input:focus {
 	opacity: 0;
 	visibility: hidden;
 }
+
 /* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
+input:not(:placeholder-shown)~.reset {
 	opacity: 1;
 	visibility: visible;
 }
+
 /* sizing svg icons */
 .form svg {
 	width: 17px;
@@ -71,7 +79,8 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 .second-container {
-	display: grid;
-	grid-template-columns: 64% 30%;
+	display: flex;
+	/* grid-template-columns: 64% 30%; */
 	gap: 50px;
+	/* flex-wrap: wrap; */
 }

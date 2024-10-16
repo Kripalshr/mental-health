@@ -13,12 +13,16 @@
 
     <!-- Hero Section -->
 
-    <div class="flex flex-row container mx-auto">
-      <div class="basis-1/2 flex flex-col justify-center min-h-[640px]">
-        <div class="text-4xl font-bold text-primary">
-          Mental Wellness <br />Matters
+    <div class="flex flex-col lg:flex-row container mx-auto px-4 py-8 my-28">
+      <!-- Text Section -->
+      <div
+        class="basis-full lg:basis-1/2 flex flex-col flex-wrap justify-center min-h-[640px] text-center lg:text-left"
+      >
+        <div class="text-3xl lg:text-4xl font-bold text-primary">
+          Mental Wellness <br class="hidden lg:block" />
+          Matters
         </div>
-        <div class="w-3/5 my-4">
+        <div class="w-full lg:w-3/5 my-4 mx-auto lg:mx-0">
           A welcoming environment with resources, self-care tips, and a
           community dedicated to your mental and emotional well-being.
         </div>
@@ -30,36 +34,54 @@
           </button>
         </div>
       </div>
-      <div class="basis-1/2 min-h-fit">
-        <img src="assets/hero-image.png" alt="" />
-        <button><i class="mdi mdi-play"></i></button>
+
+      <!-- Image Section -->
+      <div
+        class="basis-full lg:basis-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end min-h-fit"
+      >
+        <img
+          src="assets/hero-image.png"
+          alt="Hero Image"
+          class="w-full lg:w-auto max-w-[400px] lg:max-w-none"
+        />
+        <button
+          class="absolute bottom-4 right-4 lg:relative lg:bottom-auto lg:right-auto"
+        >
+          <i class="mdi mdi-play text-primary text-3xl"></i>
+        </button>
       </div>
     </div>
 
     <!-- Video Section -->
-    <section class="container mx-auto">
+
+    <section class="container mx-auto px-4 py-8">
       <div class="relative">
         <video
           src="assets/5529156-hd_1920_1080_30fps.mp4"
-          class="h-full rounded-3xl"
+          class="w-full h-auto rounded-3xl"
           id="video"
         ></video>
 
         <!-- Play button centered in the video -->
         <button
           onclick="togglePlayPause()"
-          class="bg-primary w-24 h-24 rounded-full absolute inset-0 flex justify-center items-center top-1/2 left-1/2"
+          class="bg-primary w-16 h-16 md:w-24 md:h-24 rounded-full absolute inset-0 flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2"
           id="playButton"
+          style="top: 50%; left: 50%"
         >
-          <img src="assets/play-button-svgrepo-com.svg" class="w-10" />
+          <img src="assets/play-button-svgrepo-com.svg" class="w-6 md:w-10" />
         </button>
       </div>
     </section>
 
-    <section class="flex flex-row container mx-auto my-20">
-      <div class="basis-1/2 flex flex-col justify-center min-h-[540px]">
-        <div class="text-4xl font-bold text-black my-4">Our Services</div>
-        <div class="w-3/5 my-4">
+    <section class="flex flex-col lg:flex-row container mx-auto my-20 px-4">
+      <div
+        class="basis-full lg:basis-1/2 flex flex-col justify-center min-h-[540px] text-center lg:text-left"
+      >
+        <div class="text-3xl lg:text-4xl font-bold text-black my-4">
+          Our Services
+        </div>
+        <div class="w-full lg:w-3/5 my-4 mx-auto lg:mx-0">
           We provide personalized mental health support through assessments,
           counseling, resources, support groups, and workshops, helping you
           prioritize your mental well-being.
@@ -72,7 +94,8 @@
           </button>
         </div>
       </div>
-      <div class="basis-1/2">
+
+      <div class="basis-full lg:basis-1/2 mt-8 lg:mt-0">
         <div class="grid grid-cols-2 gap-4">
           <div class="h-100 border rounded-md">
             <h2 class="my-4 mx-4 text-left text-2xl font-bold text-primary">
@@ -118,14 +141,23 @@
       </div>
     </section>
 
-    <section class="h-96 bg-primary">
-      <div class="container mx-auto flex flex-col justify-center text-center">
-        <h1 class="mt-16 text-center text-[4rem] font-bold text-[#fff]">
+    <section class="h-auto lg:h-96 bg-primary py-8 lg:py-0">
+      <div
+        class="container mx-auto flex flex-col justify-center text-center px-4"
+      >
+        <!-- Title -->
+        <h1
+          class="text-3xl sm:text-4xl lg:text-[4rem] text-[#fff] font-bold text-white mt-8 lg:mt-16 pt-8"
+        >
           Join Our Anonymous Community
         </h1>
-        <div class="text-2xl text-center text-[#fff]">
-          We can't wait to Hear Stories of People similar to you?
+
+        <!-- Subtitle -->
+        <div class="text-lg sm:text-xl lg:text-2xl text-white mt-4 text-[#fff]">
+          We can't wait to hear stories of people similar to you!
         </div>
+
+        <!-- Button -->
         <div class="my-6">
           <button
             class="py-2 px-8 rounded-full my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300"
@@ -136,7 +168,7 @@
       </div>
     </section>
 
-    <div class="" id="footer__container"></div>
+    <div id="footer__container"></div>
 
     <script src="/js/videoController.js"></script>
   </body>
