@@ -6,10 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="./style/output.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
     <script src="js/main.js"></script>
   </head>
   <body>
-    <div class="my-2" id="navbar__placeholder"></div>
+    <nav class="flex justify-between container mx-auto py-2">
+      <div class="my-auto cursor-pointer font-bold text-primary" id="logoClick">
+        <a class="text-2xl" href="../index.html">Logo</a>
+      </div>
+
+      <!-- Regular navigation hidden on small screens -->
+      <ul class="hidden md:flex md:list-none md:cursor-pointer md:my-auto">
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../service.html">Services</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../blog.html">Blogs</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../community.html">Community</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          Contact Us
+        </li>
+      </ul>
+
+      <button
+        class="responsive-button rounded-full px-8 py-2 my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300 small-hidden"
+      >
+        Let's Talk
+      </button>
+
+      <!-- Hamburger Button for mobile -->
+      <button class="md:hidden text-3xl" id="expand-button">☰</button>
+    </nav>
+
+    <!-- Fullscreen Navigation Menu (Initially Hidden) -->
+    <div id="fullscreen-nav">
+      <!-- Cross (Close) Button -->
+      <span class="close-btn" id="close-btn">&times;</span>
+
+      <!-- Navigation Links for Fullscreen -->
+      <ul>
+        <li><a href="../service.html">Services</a></li>
+        <li><a href="../blog.html">Blogs</a></li>
+        <li><a href="../community.html">Community</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
 
     <!-- Hero Section -->
 
@@ -170,6 +214,23 @@
 
     <div id="footer__container"></div>
 
+    <script>
+      const expandButton = document.getElementById("expand-button");
+      const closeButton = document.getElementById("close-btn");
+      const fullscreenNav = document.getElementById("fullscreen-nav");
+
+      // Show fullscreen navigation on click
+      expandButton.addEventListener("click", function () {
+        fullscreenNav.style.display = "flex"; // Show the full-screen nav
+        document.body.style.overflow = "hidden"; // Disable scrolling on body
+      });
+
+      // Hide fullscreen navigation when the close button is clicked
+      closeButton.addEventListener("click", function () {
+        fullscreenNav.style.display = "none"; // Hide the full-screen nav
+        document.body.style.overflow = "auto"; // Enable scrolling on body
+      });
+    </script>
     <script src="/js/videoController.js"></script>
   </body>
 </html>

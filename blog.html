@@ -6,35 +6,55 @@
     <title>Blog</title>
     <script src="/js/main.js"></script>
     <link rel="stylesheet" href="/style/output.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
   </head>
   <body>
-    <div class="my-2" id="navbar__placeholder"></div>
-
-    <!-- Hero Content -->
-    <!-- <section class="mt-10">
-      <div class="container mx-auto">
-        <div class="flex flex-row gap ml-10">
-          <div class="flex flex-col justify-center z-10 w-1/2">
-            <div class="bg-[#F5F2FD] rounded-2xl py-16 px-8">
-              <h1
-                class="text-[2.5rem] font-bold text-primary w-2/3 leading-tight"
-              >
-                Understanding Loneliness: The Silent Struggle
-              </h1>
-              <p class="text-[#000000] text-[1.2rem] w-4/5 my-2">
-                Loneliness is an emotional challenge many face but seldom
-                discuss. In this blog, we explore its impact on mental health
-                and ways to offer support.
-              </p>
-              <p>May 29, 2023</p>
-            </div>
-          </div>
-          <div class="w-1/2 right-0">
-            <img src="/assets/blog.png" alt="" class="w-full -ml-10" />
-          </div>
-        </div>
+    <!-- <div class="my-2" id="navbar__placeholder"></div> -->
+    <nav class="flex justify-between container mx-auto py-2">
+      <div class="my-auto cursor-pointer font-bold text-primary" id="logoClick">
+        <a class="text-2xl" href="../index.html">Logo</a>
       </div>
-    </section> -->
+
+      <!-- Regular navigation hidden on small screens -->
+      <ul class="hidden md:flex md:list-none md:cursor-pointer md:my-auto">
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../service.html">Services</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../blog.html">Blogs</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          <a href="../community.html">Community</a>
+        </li>
+        <li class="mr-10 hover:text-primary transition-all duration-300">
+          Contact Us
+        </li>
+      </ul>
+
+      <button
+        class="responsive-button rounded-full px-8 py-2 my-auto bg-primary border-2 border-transparent text-[#ffffff] hover:bg-[#fff] hover:text-primary hover:border-primary transition-all duration-300 small-hidden"
+      >
+        Let's Talk
+      </button>
+
+      <!-- Hamburger Button for mobile -->
+      <button class="md:hidden text-3xl" id="expand-button">☰</button>
+    </nav>
+
+    <!-- Fullscreen Navigation Menu (Initially Hidden) -->
+    <div id="fullscreen-nav">
+      <!-- Cross (Close) Button -->
+      <span class="close-btn" id="close-btn">&times;</span>
+
+      <!-- Navigation Links for Fullscreen -->
+      <ul>
+        <li><a href="../service.html">Services</a></li>
+        <li><a href="../blog.html">Blogs</a></li>
+        <li><a href="../community.html">Community</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
     <section class="mt-10">
       <div class="container mx-auto px-4">
         <div
@@ -211,5 +231,23 @@
     </section>
 
     <div id="footer__container"></div>
+
+    <script>
+      const expandButton = document.getElementById("expand-button");
+      const closeButton = document.getElementById("close-btn");
+      const fullscreenNav = document.getElementById("fullscreen-nav");
+
+      // Show fullscreen navigation on click
+      expandButton.addEventListener("click", function () {
+        fullscreenNav.style.display = "flex"; // Show the full-screen nav
+        document.body.style.overflow = "hidden"; // Disable scrolling on body
+      });
+
+      // Hide fullscreen navigation when the close button is clicked
+      closeButton.addEventListener("click", function () {
+        fullscreenNav.style.display = "none"; // Hide the full-screen nav
+        document.body.style.overflow = "auto"; // Enable scrolling on body
+      });
+    </script>
   </body>
 </html>
